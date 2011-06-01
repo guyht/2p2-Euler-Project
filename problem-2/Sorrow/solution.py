@@ -10,4 +10,18 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 
+def fibonacci(n):
+    """Function returns the Fibonacci sequence with max value of n as an ordered list of ints"""
+    a,b = 1,2
+    seq = []
+    while a < n:
+        seq.append(a)
+        a,b, = b,a+b
 
+    return seq
+
+l = fibonacci(4000000)
+
+evens = [x for x in l if x%2 == 0]
+
+print sum(evens)
