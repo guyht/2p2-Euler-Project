@@ -53,16 +53,16 @@ if len(args) == 0:
 
 # Now run tests
 for solution in args:
-	times = 0
+	times = []
 
 	print "Testing solution " + solution
 
 	for x in range(1,_num_runs):
 		start = time.time()
 		subprocess.call(solution, stdout=FNULL)
-		times = times + (time.time() - start)
+		times.append(time.time() - start)
 
-	average = times / _num_runs
+	average = sum(times)/_num_runs
 	print "Average execution time: " + str(average)
 
 
