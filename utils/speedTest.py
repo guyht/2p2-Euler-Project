@@ -28,6 +28,7 @@ argv = sys.argv[1:]
 
 # Default to 10 runs
 _num_runs = 10
+FNULL = open("/dev/null", "w")
 
 try:
 	opts, args = getopt.getopt(argv, "hn:")
@@ -58,7 +59,7 @@ for solution in args:
 
 	for x in range(1,_num_runs):
 		start = time.time()
-		subprocess.call(solution)
+		subprocess.call(solution, stdout=FNULL)
 		times = times + (time.time() - start)
 
 	average = times / _num_runs
