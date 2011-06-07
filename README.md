@@ -23,8 +23,9 @@ Solutions should output the solution (obviously)
 Solutions should profile themselves and output their execution time.  This is helpful in comparing solutions.  The rules for this are that you must profile all code that is executed, with the exception of console logging.  You should output the time taken in milliseconds to the console: `Time Taken: 12345ms`.
 
 Example for a python solution:
-    start = time.time()
-    # Run your code here
-    end = time.time() - start
-    print "Time Taken: " + str(end) + "ms"
+
+    `start = time.time()`
+    `# Run your code here`
+    `end = time.time() - start`
+    `print "Time Taken: " + str(end) + "ms"`
 
