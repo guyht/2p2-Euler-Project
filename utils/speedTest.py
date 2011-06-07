@@ -28,6 +28,7 @@ argv = sys.argv[1:]
 
 # Default to 10 runs
 _num_runs = 10
+FNULL = open("/dev/null", "w")
 
 try:
 	opts, args = getopt.getopt(argv, "hn:")
@@ -52,16 +53,16 @@ if len(args) == 0:
 
 # Now run tests
 for solution in args:
-	times = 0
+	times = []
 
 	print "Testing solution " + solution
 
 	for x in range(1,_num_runs):
 		start = time.time()
-		subprocess.call(solution)
-		times = times + (time.time() - start)
+		subprocess.call(solution, stdout=FNULL)
+		times.append(time.time() - start)
 
-	average = times / _num_runs
+	average = sum(times)/_num_runs
 	print "Average execution time: " + str(average)
 
 
