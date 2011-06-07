@@ -24,8 +24,8 @@ Solutions should profile themselves and output their execution time.  This is he
 
 Example for a python solution:
 
-    `start = time.time()`
-    `# Run your code here`
-    `end = time.time() - start`
-    `print "Time Taken: " + str(end) + "ms"`
+    start = time.time()
+    # Run your code here
+    end = time.time() - start
+    print "Time Taken: " + str(end) + "ms"
 
