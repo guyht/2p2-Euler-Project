@@ -6,6 +6,8 @@
  * Find the sum of all the primes below two million.
  */
 
+var start = new Date();
+
 var floor = 2000000,
 	sum=2,i;
 
@@ -27,5 +29,7 @@ for(i=3;i<=floor;i=i+2) {
 		sum += i;
 	}
 }
+
+console.log('Time taken ' + (new Date().getTime() - start));
 
 console.log('Sum of primes below 2,000,000 : ' + sum);
