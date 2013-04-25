@@ -1,6 +1,6 @@
-## 2p2 Project Euler Challange
+## 2p2 Project Euler Challenge
 
-Welcome to the 2p2 Project Euler Challange!
+Welcome to the 2p2 Project Euler Challenge!
 
 ### Step 1
 * Fork the GitHub repository
@@ -9,7 +9,7 @@ Welcome to the 2p2 Project Euler Challange!
 * Use the following directory structure: problem-x -> 2p2username -> solution.ext
 * Some problems require common data files (e.g. problem 22).  If this is the case, the first person to solve the problem should add it to the main problem directory for others to use.
 
-### Step 4
+### Step 3
 * Grinding
 
 ### Step 4
